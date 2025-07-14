@@ -1,0 +1,178 @@
+// responsive para móviles y tablets
+@media (max-width: 1200px) {
+    .information { padding: 0 2vw; }
+    .about-img img { width: 100%; }
+    .services-content,
+    .servicios-grande {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        max-width: 100vw;
+        justify-items: center;
+    }
+    .services-1 {
+        min-width: 220px;
+        max-width: 98vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 1100px) {
+    .information { gap: 16px; padding: 0 2vw; }
+    .information-1 { max-width: 48vw; min-width: 180px; padding: 14px 8px; }
+}
+@media (max-width: 992px) {
+    .header-txt { padding: 0 4vw; }
+    .information {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 0;
+        padding: 0 3vw;
+    }
+    .information-1 { max-width: 98vw; min-width: 140px; margin: 8px 0; }
+    .about { flex-direction: column; gap: 40px; padding: 60px 0; }
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        align-items: flex-start;
+        text-align: center;
+        justify-items: center;
+    }
+    .link {
+        max-width: 100%;
+        min-width: 0;
+        margin-bottom: 18px;
+        padding: 0 4px;
+    }
+    .services-content,
+    .servicios-grande {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+        max-width: 100vw;
+        justify-items: center;
+    }
+    .services-1 { min-width: 180px; max-width: 98vw; width: 100%; }
+    .price-content { flex-direction: column; gap: 30px; }
+    .menu label { display: initial; z-index: 300; }
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(90deg, #1E202D 0%, #687CEF 100%);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        border-radius: 0 0 16px 16px;
+        display: none;
+        z-index: 250;
+        animation: none;
+    }
+    #menu:checked ~ .navbar {
+        display: block;
+        animation: menuFadeIn 0.3s;
+    }
+    @keyframes menuFadeIn {
+        from { opacity: 0; transform: translateY(-10px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+    .menu .navbar ul { padding: 20px 0; margin: 0; }
+    .menu .navbar ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        float: none;
+    }
+    .menu .navbar ul li a {
+        color: #FDFEFF;
+        font-size: 20px;
+        padding: 18px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        transition: background 0.2s, color 0.2s;
+        display: block;
+    }
+    .menu .navbar ul li:last-child a { border-bottom: none; }
+    .menu .navbar ul li a:hover {
+        background: #687CEF;
+        color: #1E202D;
+    }
+}
+@media (max-width: 800px) {
+    .information { flex-wrap: wrap; justify-content: center; gap: 12px; padding: 0 2vw; }
+    .information-1 { max-width: 99vw; min-width: 120px; margin: 12px 0; padding: 18px 3vw; }
+    .information-1 h3 { font-size: 24px; }
+    .information-1 p { font-size: 17px; }
+    .information-1 img { width: 44px !important; height: 44px !important; }
+    .services-content,
+    .servicios-grande {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        max-width: 100vw;
+        justify-items: center;
+    }
+    .services-1 {
+        min-width: 0;
+        width: 98vw;
+        max-width: 99vw;
+        padding: 22px 2vw;
+        height: auto;
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 600px) {
+    // evitar scroll horizontal
+    body {
+        overflow-x: hidden;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .link {
+        padding: 0 2px;
+        min-width: 0;
+        max-width: 100%;
+    }
+    .link ul {
+        padding-left: 0;
+    }
+    .information { flex-direction: column; align-items: center; gap: 10px; padding: 0 2vw; }
+    .information-1 {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px 16px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        min-width: 0;
+    }
+    .information-1 h3 { font-size: 18px; }
+    .information-1 p { font-size: 15px; }
+    .information-1 img { width: 36px !important; height: 36px !important; }
+    .services-content,
+    .servicios-grande {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 100%;
+        max-width: 100%;
+        justify-items: center;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+    .services-1 {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+        min-width: 0;
+    }
+    
+    .contact-form {
+        width: 100%;
+        max-width: 98vw;
+        padding: 0 2vw;
+    }
+}

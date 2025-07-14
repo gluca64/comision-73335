@@ -1,0 +1,110 @@
+// menu de navegacion
+.menu {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 200;
+}
+.menu-icono { width: 25px; }
+.menu label { cursor: pointer; display: none; }
+#menu { display: none; }
+.menu .navbar ul li { float: left; }
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFFFF;
+    font-weight: 600;
+    display: block;
+}
+.menu .navbar ul li a:hover { color: #687CEF; }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #687CEF;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+.logo-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.menu {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(30,32,45,0.97);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: background 0.3s, box-shadow 0.3s, padding 0.3s;
+    z-index: 999;
+    padding: 8px 20px !important;
+}
+.menu .logo-img {
+    height: 36px !important;
+    width: auto;
+}
+.menu .logo-text {
+    font-size: 1rem !important;
+}
+.menu .navbar ul li a {
+    font-size: 15px !important;
+    padding: 10px 12px !important;
+}
+
+// footer
+.footer {
+    background: #23243a;
+    padding: 60px 0 30px 0;
+    color: #fff;
+}
+.footer .link span {
+    color: #FDFEFF;
+    text-decoration: none;
+    cursor: default;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.link {
+    flex: 1 1 180px;
+    min-width: 180px;
+    max-width: 240px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.link h3 {
+    color: #687CEF;
+    font-size: 20px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.link ul { padding-left: 0; margin: 0; }
+.link ul li { margin-bottom: 10px; }
+.link a {
+    color: #D2D2D2;
+    font-size: 16px;
+    display: block;
+    transition: color 0.2s;
+    text-decoration: none !important;
+}
+.link a:hover { color: #687CEF; }
